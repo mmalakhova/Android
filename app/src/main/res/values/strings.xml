@@ -1,11 +1,5 @@
 <resources>
     <string name="app_name">Homework</string>
-    <string name="click_me">Click me</string>
-    <string name="cat_s_studio">Cat\'s Studio</string>
-    <string name="choose_your_kitten">Choose your kitten:</string>
-    <string-array name="cats_array">
-        <item>White kitten</item>
-        <item>Kitten in a grey spot</item>
-        <item>Black kitten</item>
-    </string-array>
+    <string name="increment_counter">Increment counter</string>
+    <string name="show_toast">Show Toast</string>
 </resources>

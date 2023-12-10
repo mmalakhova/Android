@@ -2,15 +2,16 @@ package fit.malakhova.homework;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button1;
+    Button countButton;
+    Button showToastButton;
+    int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,11 +19,11 @@ public class MainActivity extends AppCompatActivity {
         Log.i("INFO", "OnCreate method - MAIN ACTIVITY");
         setContentView(R.layout.activity_main);
 
-        button1 = findViewById(R.id.button_1id);
-        button1.setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity.this, ListActivity.class);
-            startActivity(intent);
-        });
+        countButton = findViewById(R.id.count_button);
+        showToastButton = findViewById(R.id.show_toast_button);
+        countButton.setOnClickListener(view -> count++);
+
+        showToastButton.setOnClickListener(view -> Toast.makeText(MainActivity.this, "Current counter value = " + count, Toast.LENGTH_LONG).show());
     }
 
     @Override
